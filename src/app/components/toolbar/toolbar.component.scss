@@ -1,0 +1,26 @@
+.dot {
+    font-weight: bold;
+    font-size: large;
+}
+
+h1 {
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+.tool {
+    margin-right: 15%;
+    cursor: pointer;
+    @media (max-width: 666px) {
+        display: none
+    }
+    
+}
+
+.text {
+    color: var(--primary-text-color);
+}
+
+.item:hover {
+    color: #3f51b5
+}

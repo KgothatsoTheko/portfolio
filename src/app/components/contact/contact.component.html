@@ -1,0 +1,63 @@
+<div class="column bg flex gap-1em text-center white" id="contact">
+    <div class="flex column text-center">
+    <h1 class="primary no-margin margin-top-20px">Contact</h1>
+    <p class="no-margin"><b>How To Contact Me</b></p>
+    <p class="padding-10px">I am currently open to new opportunities and collaborations. If you have a project you'd like to discuss or if you simply want to connect, feel free to reach out through:</p>
+    </div>
+    <div class="flex row gap-1em">
+        <div class="column flex gap-1em">
+            <mat-card class="card">
+                <div class="row flex text-center gap-1em">
+                    <span class="material-symbols-outlined primary">
+                        phone
+                    </span>
+                    <p>+27 61 422 7501</p>
+                </div>
+            </mat-card>
+            <mat-card class="card">
+                <div class="row flex text-center gap-1em">
+                    <span class="material-symbols-outlined primary">
+                        mail
+                    </span>
+                    <p>
+                    <a href="mailto:kgothatso@gmail.com">kgothatsotheko&#64;gmail.com</a>
+                    </p>
+                    
+                </div>
+            </mat-card>
+            <mat-card class="card">
+                <div class="row flex text-center gap-1em">
+                    <i class="fa fa-linkedin-square primary" style="font-size: 24px;"></i>
+                    <a href="https://www.linkedin.com/in/kgothatso-theko-197241226/">Kgothatso Theko</a>
+                </div>
+            </mat-card>
+        </div>
+        <div class="column flex gap-1em">
+            <mat-card class="card2">
+                <form class="flex column gap-1em" [formGroup]="contactForm">
+                    <h3 class="center-center flex">Send a Message!</h3>
+                    <div class="flex row gap-1em">
+                        <mat-form-field class="input">
+                            <mat-label>First Name</mat-label>
+                            <input matInput formControlName = "firstName">
+                        </mat-form-field>
+    
+                        <mat-form-field class="input">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput formControlName = "lastName">
+                        </mat-form-field>
+                    </div> 
+                    <mat-form-field class="inputvfull-widtn">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput formControlName = "email">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput formControlName = "message"></textarea>
+                      </mat-form-field>
+                </form>
+                <button mat-flat-button color="primary" (click)="sendMessage()">Send Message</button>
+            </mat-card>
+        </div>
+    </div>
+</div>

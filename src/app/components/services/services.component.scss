@@ -1,0 +1,14 @@
+.skill {
+    font-size: small;
+}
+
+.cards {
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-card-color);
+}
+
+.cards:hover {
+    background-color: var(--primary-text-color);
+    color: var(--primary-bg-color);
+}

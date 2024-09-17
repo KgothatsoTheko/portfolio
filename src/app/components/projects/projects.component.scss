@@ -1,0 +1,38 @@
+.line {
+    border: 1px solid;
+    width: 200px;
+}
+
+.cards {
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-card-color);
+}
+
+.img1 {
+    background-image: url('../../../assets/projects/weather.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.img2 {
+    background-image: url('../../../assets/projects/quiz.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+
+.img3 {
+    background-image: url('../../../assets/projects/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+
+.img4 {
+    background-image: url('../../../assets/projects/saV.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}

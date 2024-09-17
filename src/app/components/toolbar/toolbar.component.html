@@ -1,0 +1,41 @@
+<mat-toolbar class="flex spacebetween-center bg fixed white">
+    <h1><strong>KT</strong><span class="primary dot">.</span></h1>
+    <mat-slide-toggle color="primary" (change)="toggleTheme()">
+    <mat-label class="white">Change Theme</mat-label></mat-slide-toggle>
+
+    <!-- Menu button for smaller screens -->
+    <button mat-icon-button *ngIf="showMenuButton" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Navigation items -->
+    <div class="flex gap-2em tool">
+        <div class="flex row center-center gap-05em">
+            <span routerLink="./homepage" class="item" (click)="scrollTo('homepage')"><small>Home</small></span>
+        </div>
+
+        <div class="flex row center-center gap-05em">
+            <span routerLink="./about" class="item" (click)="scrollTo('about')"><small>About</small></span>
+        </div>
+
+        <div class="flex row center-center gap-05em">
+            <span routerLink="./services" class="item" (click)="scrollTo('services')"><small>Services</small></span>
+        </div>
+
+        <div class="flex row center-center gap-05em">
+            <span routerLink="./projects" class="item" (click)="scrollTo('projects')"><small>Projects</small></span>
+        </div>
+
+        <div class="flex row center-center gap-05em">
+            <span routerLink="./contact" class="item" (click)="scrollTo('contact')"><small>Contact</small></span>
+        </div>
+    </div>
+
+    <!-- Menu for smaller screens -->
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let item of menuItems">
+            <span routerLink="{{item.link}}" class="item" (click)="scrollTo(item.target)">{{item.label}}</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
+
