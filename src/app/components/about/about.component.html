@@ -1,21 +1,94 @@
-<div class="column full-height flex text-center gap-1em bg white" id="about">
+<div class="column full-width flex text-center gap-1em bg white" id="about">
     <h2 class="flex primary no-margin">About Me</h2>
-    <div class="text-center flex column-reverse">
+    <div class="text-center full-width flex column-reverse">
         <div class="slider">
-            <span style="--i:1;"><img src="../../../assets/skills/pic1.jpeg" matTooltip="Angular"></span>
-            <span style="--i:2;"><img src="../../../assets/skills/pic2.jpeg" matTooltip="HTML"></span>
-            <span style="--i:3;"><img src="../../../assets/skills/pic3.jpeg" matTooltip="CSS"></span>
-            <span style="--i:4;"><img src="../../../assets/skills/pic4.jpeg" matTooltip="JavaScript"></span>
-            <span style="--i:5;"><img src="../../../assets/skills/pic5.jpeg" matTooltip="MongDB"></span>
+            <!-- <span style="--i:1;"><img src="../../../assets/skills/pic2.jpeg" matTooltip="HTML"></span>
+            <span style="--i:2;"><img src="../../../assets/skills/pic3.jpeg" matTooltip="CSS"></span> -->
+            <span style="--i:1;"><img src="../../../assets/skills/pic4.jpeg" matTooltip="JavaScript"></span>
+            <span style="--i:2;"><img src="../../../assets/skills/pic1.jpeg" matTooltip="Angular"></span>
+            <span style="--i:3;"><img src="../../../assets/skills/pic10.jpeg" matTooltip="React"></span>
+            <span style="--i:4;"><img src="../../../assets/skills/pic5.jpeg" matTooltip="MongoDB"></span>
+            <span style="--i:5;"><img src="../../../assets/skills/pic11.jpeg" matTooltip="PostgreSQL"></span>
             <span style="--i:6;"><img src="../../../assets/skills/pic6.jpeg" matTooltip="Node.js"></span>
             <span style="--i:7;"><img src="../../../assets/skills/pic7.jpeg" matTooltip="C#"></span>
             <span style="--i:8;"><img src="../../../assets/skills/pic8.jpeg" matTooltip="Kotlin"></span>
+            <span style="--i:9;"><img src="../../../assets/skills/pic9.jpeg" matTooltip="Docker"></span>
         </div>
         <div class="con">
-            <p> My journey into the world of programming began during my academic years, and since then, I've been on a continuous learning path, staying updated with the latest technologies and trends in the web development landscape.</p>
+            <p>My journey into software development started with a Higher Certificate in IT Support Services, building a strong foundation in troubleshooting and client interaction. I later earned a Bachelor of Computer & Information Science in Application Development from Varsity College Waterfall, specializing in full-stack web and mobile development.</p>
             <p class="no-margin">
-                I aimed at being an innovated individual who enjoys computers and coding. Calm, rational and logical approach to situations and challenges. Currently studying Bachlor of Computer Science and Information Technology in Application Development and graduate in Higher Certificate in IT at Varsity College. Knowledgeable and skillfull in Java, C#, SQL Databse, Oracle and Microsoft Azure. 
+                I have hands-on experience with JavaScript, Kotlin, C#, Docker, PostgreSQL, MongoDB, Angular, React, and Android Studio. My professional experience includes a learnership placement at Blue Label Distribution as a Call Interaction Agent, enhancing my problem-solving and communication skills. Additionally, I expanded my technical expertise through Neutrinos' web development training with Afrika Tikkun Services, focusing on modern web development, cloud technologies, and industry standards. 
             </p>
         </div>
     </div>
+    <h2 class="flex no-margin primary">Experience</h2>
+    <div class="full-width">  
+        <mat-stepper
+          class="example-stepper"
+          [orientation]="(stepperOrientation | async)!">
+          <mat-step label="Student">
+            <mat-card class="flex column center-center black padding-5px border-box no-relative unset">
+              <div class="flex gap-1em center-center padding-5px border-box">
+                <div>
+                    <img src="../../../assets/exp/vc.jpeg" alt="VC" width="100%">
+                </div>
+                <div><h3>Student</h3></div>
+              </div>
+              <span>3 Years</span>
+              <p>Completed advancing my studies in the Bachelor of Computer and Information Science program, specializing in Application Development. Gained comprehensive knowledge and practical skills in various aspects of software development and application design.</p>
+            </mat-card><br>
+            <div>
+              <button class="primary" mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+          <mat-step label="Call Interaction Agent">
+            <mat-card class="flex column center-center black padding-5px border-box no-relative unset">
+                <div class="flex gap-1em center-center padding-5px border-box">
+                    <div>
+                        <img src="../../../assets/exp/blue_label_telecoms.jpeg" alt="BLT" width="100%">
+                    </div>
+                    <div><h3>Call Interaction Agent</h3></div>
+                </div>
+              <span>3 months</span>
+              <p>During a 3-month learnership at Blue Label Distribution, a division of Blue Label Telecoms, I served as a Call Interaction Agent (CIA). In this role, I engaged with customers over the phone, providing support, answering inquiries, and ensuring customer satisfaction.
+                Although the learnership was unfinished, this experience provided me with valuable insights into customer service practices, communication techniques, and problem-solving skills in a fast-paced environment.</p>
+            </mat-card><br>
+              <div>
+                <button class="primary" mat-button matStepperPrevious>Back</button>
+                <button class="primary" mat-button matStepperNext>Next</button>
+              </div>
+          </mat-step>
+          <mat-step label="Candidate">
+              <mat-card class="flex column center-center black padding-5px border-box no-relative unset">
+                <div class="flex gap-1em center-center padding-5px border-box">
+                    <div>
+                        <img src="../../../assets/exp/afrikatikkun.jpeg" alt="ATS" width="100%">
+                    </div>
+                    <div><h3>Candidate</h3></div>
+                </div>
+                <span>6 months</span>
+                <p>Undergone intensive training in Full Stack Web Development, with a specific focus on the MEAN Stack (MongoDB, Express.js, Angular, Node.js). This comprehensive program at Afrika Tikkun Services, in collaboration with Neutrinos, provides hands-on experience in developing dynamic web applications from front-end to back-end.</p>
+                </mat-card><br>
+              <div>
+                <button class="primary" mat-button matStepperPrevious>Back</button>
+                <button class="primary" mat-button matStepperNext>Next</button>
+              </div>
+          </mat-step>
+          <mat-step label="Software Engineer Intern">
+              <mat-card class="flex column center-center black padding-5px border-box no-relative unset">
+                <div class="flex gap-1em center-center padding-5px border-box">
+                    <div>
+                        <img src="../../../assets/exp/neutrinos.jpeg" alt="Neutrinos" width="100%">
+                    </div>
+                    <div><h3>Software Engineer Intern</h3></div>
+                </div>
+                <span>5 months</span>
+                <p>Intensive training and work experience with Neutrinos via Afrika Tikkun Services, focusing on modern web & mobile development practices, cloud technologies, and industry standards using the Neutrinos platform.</p>
+                </mat-card><br>
+              <div>
+                <button class="primary" mat-button matStepperPrevious>Back</button>
+              </div>
+          </mat-step>
+        </mat-stepper>
+  </div>
 </div>

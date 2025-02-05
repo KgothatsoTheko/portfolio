@@ -4,6 +4,7 @@
 
 $green: #008004;
 $white: #ffff;
+$black: #000;
 $bg: #2a2a2a;
 $primary: #3f51b5;
 
@@ -46,7 +47,7 @@ body { margin: 0; font-family: 'Poppins', "El Messiri", sans-serif;
 }
 
 .column {
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 .column-reverse {
@@ -97,8 +98,16 @@ body { margin: 0; font-family: 'Poppins', "El Messiri", sans-serif;
     gap: 2em;
 }
 
+.padding-5px {
+    padding: 5px;
+}
+
 .padding-10px {
     padding: 10px;
+}
+
+.border-box {
+    box-sizing: border-box;
 }
 
 // positions
@@ -115,14 +124,22 @@ body { margin: 0; font-family: 'Poppins', "El Messiri", sans-serif;
     position: relative;
 }
 
+.unset {
+    position: unset !important;
+}
+
 // colors
 
 .green {
     color: $green;
 }
 
+.black {
+    color: $black !important;
+}
+
 .primary {
-    color: $primary;
+    color: $primary !important;
 }
 
 .white {
@@ -136,3 +153,40 @@ body { margin: 0; font-family: 'Poppins', "El Messiri", sans-serif;
 .pointer {
     cursor: pointer;
 }
+
+// Apply theme-based colors to mat-stepper and mat-step-header
+.mat-stepper-horizontal, 
+.mat-stepper-vertical {
+    background-color: var(--primary-bg-color) !important;
+}
+
+.mat-step-header {
+    background-color: var(--primary-card-color) !important;
+    color: var(--primary-text-color) !important;
+    position: unset !important;
+}
+
+// Stepper icon styling
+.mat-step-header .mat-step-icon {
+    background-color: var(--primary-card-color) !important;
+    color: var(--primary-text-color) !important;
+}
+
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+    background-color: var(--primary-bg-color) !important;
+    color: var(--primary-text-color) !important;
+}
+
+.mat-step-header .mat-step-label.mat-step-label-active {
+    color: var(--primary-text-color) !important;
+}
+
+@media only screen and (max-width: 488px){ 
+    .mat-mdc-form-field {
+        width: 100%;
+    }
+    
+}
+

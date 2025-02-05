@@ -1,8 +1,27 @@
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+#about h2 {
+    font-size: 2rem;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+
 .slider {
     position: relative;
-    margin-top: 10%;
-    width: 200px;
-    height: 200px;
+    margin-top: 5%;
+    width: 150px;
+    height: 150px;
     transform-style: preserve-3d;
     animation: rotate 30s linear infinite;
 }
@@ -11,7 +30,6 @@
     0% {
         transform: perspective(1000px) rotateY(0deg);
     }
-
     100% {
         transform: perspective(1000px) rotateY(360deg);
     }
@@ -25,9 +43,8 @@
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+    transform: rotateY(calc(var(--i) * 80deg)) translateZ(250px);
 }
-
 
 .slider span img {
     position: absolute;
@@ -37,14 +54,70 @@
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
-    transition: 2s;
+    transition: 0.5s ease;
 }
 
 .slider span:hover img {
-    transform: translateY(-50px) scale(1.2);
+    transform: translateY(-20px) scale(1.1);
 }
 
 .con {
     padding: 10px;
     box-sizing: border-box;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+// @media (min-width: 768px) {
+//     .text-center {
+//         flex-direction: row-reverse;
+//         justify-content: center;
+//         align-items: center;
+//         gap: 3em;
+//     }
+
+//     .slider {
+//         width: 200px;
+//         height: 200px;
+//     }
+
+//     .slider span {
+//         transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+//     }
+
+//     .con {
+//         max-width: 500px;
+//         text-align: left;
+//     }
+// }
+
+@media (max-width: 480px) {
+    .slider {
+        width: 120px;
+        height: 120px;
+    }
+
+    .slider span {
+        transform: rotateY(calc(var(--i) * 80deg)) translateZ(180px);
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+    }
+}
+
+span {
+    font-size: 40px !important;
+    color: black;
+}
+
+@media only screen and (max-width: 550px) {
+    .make100p {
+        width: 100%;
+    }
+  }
+
+.example-stepper {
+    margin-top: 8px;
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -14,27 +14,30 @@ export class ContactComponent {
   constructor(private api: ApiService, private snackbar: MatSnackBar) {}
 
   contactForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl(''),
+    firstName: new FormControl('',Validators.required),
+    lastName: new FormControl('',Validators.required),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    message: new FormControl('',Validators.required),
   })
 
   sendMessage() {
-    if(this.contactForm.invalid) return
-    
-    let formValue = this.contactForm.value
+    if(this.contactForm.invalid) {
+      this.snackbar.open(`Please fill in all fields`, 'Ok', {duration: 2000})
+      return;
+    } else { 
+      let formValue = this.contactForm.value
 
-    this.api.genericPost('/send-message', formValue) 
+    this.api.genericPost('send-message', formValue) 
     .subscribe({
       next:(res:any) => {
-        sessionStorage.setItem('currentUser', JSON.stringify('res'));
+      this.snackbar.open(`Message sent: ${res}`, 'Ok', {duration: 2000});
         this.contactForm.reset()
         this.clicked.emit('closed')
       },
       error: (err: any) => this.snackbar.open(err.error, 'Ok', { duration: 3000 }),
       complete: () => { }
     })
+    }
 
   }
 

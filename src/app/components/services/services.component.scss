@@ -1,14 +1,17 @@
-.skill {
-    font-size: small;
-}
-
-.cards {
-    width: 150px;
-    height: 150px;
+.perk {
+    width: 45%;
     background-color: var(--primary-card-color);
 }
 
 .cards:hover {
     background-color: var(--primary-text-color);
     color: var(--primary-bg-color);
+}
+
+@media only screen and (max-width: 666px) {
+
+    .perk {
+        width: 95%;
+    }
+    
 }
