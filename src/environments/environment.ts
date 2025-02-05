@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    nodeAppUrl: ''
+    nodeAppUrl: 'https://kgothatso-theko.vercel.app/api/'
 };
