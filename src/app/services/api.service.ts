@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 // import { environment } from 'src/environments/environment.development';
 
@@ -11,6 +12,18 @@ export class ApiService {
   baseUrl: string = environment.nodeAppUrl;
 
   constructor(private http: HttpClient) { }
+
+  private _isDarkTheme = new BehaviorSubject<boolean>(true);
+  isDarkTheme$ = this._isDarkTheme.asObservable();
+
+  toggleTheme() {
+    const current = this._isDarkTheme.value;
+    this._isDarkTheme.next(!current);
+  }
+
+  setTheme(isDark: boolean) {
+    this._isDarkTheme.next(isDark);
+  }
 
   // Generic Get
   genericGet(endpoint: string) {

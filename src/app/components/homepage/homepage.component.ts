@@ -10,11 +10,16 @@ export class HomepageComponent implements OnInit {
 
   dynamicWord: string = ''; // Holds the current word to display
   currentIndex: number = 0; // Index to keep track of the current word
+  lightTheme = true
 
   constructor(private api: ApiService) {}
 
   ngOnInit() {
     this.changeWord();
+
+    this.api.isDarkTheme$.subscribe((isDark) => {
+      this.lightTheme = !isDark; // inverse logic for lightTheme
+    });
   }
 
   changeWord() {
@@ -24,6 +29,6 @@ export class HomepageComponent implements OnInit {
     }, 3000); // Change word every 3 seconds (3000ms)
   }
 
-  words: string[] = ['Full-Stack Web Developer', 'Mobile Developer', 'Software Engineer', 'IT Graduate']; // Array of words
+  words: string[] = ['Software Engineer', 'Full-Stack Web Developer', 'Full-Stack Mobile Developer', 'IT Graduate']; // Array of words
 
 }

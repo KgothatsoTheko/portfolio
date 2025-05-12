@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,21 +9,21 @@ import { Router } from '@angular/router';
 })
 export class ToolbarComponent {
 
-  isDark = false
+  isDark = true
 
   toggleTheme() {
-    if(!this.isDark) {
-      if(!document.body.classList.contains('light')) {
-        document.body.classList.add('light')
-      } else {
-        if (document.body.classList.contains('light')) {
-          document.body.classList.remove('light')
-        }
-      }
+    this.isDark = !this.isDark;
+
+    if (this.isDark) {
+      document.body.classList.remove('light');
+    } else {
+      document.body.classList.add('light');
     }
+
+    this.api.setTheme(this.isDark);
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private api: ApiService) {}
 
   // Scroll to app component
   scrollTo(target: string) {

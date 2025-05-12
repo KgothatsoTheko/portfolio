@@ -24,19 +24,20 @@
                 </div>
             </div><br>
 
-            <button mat-flat-button color="primary"class="contactBtn"><a class="text white" href="../../../assets/Kgothatso Theko Resume Compressed Low.pdf">View Resume</a></button>
+            <button mat-flat-button color="primary"class="contactBtn"><a class="text white" href="../../../assets/KgothatsoTheko-Resume.pdf">View Resume</a></button>
         </div>
         <div class="center-center column flex full-width">
-            <img src="../../../assets/me.png" alt="me" width="100%">
+            <img *ngIf="lightTheme" src="../../../assets/me.png" alt="me" width="100%">
+            <img *ngIf="!lightTheme" src="../../../assets/me2-removebg-preview.png" alt="me" width="100%">
         </div>
-        <div class="column flex phone">
+        <div class="column padding-10px border-box flex phone">
             <span class="no-margin">Hello,</span>
             <h2 class="no-margin"><strong>I'm a <span>{{dynamicWord}}</span></strong></h2>
             <p>
                 Everyday is an opportunity to improve, even if it's only 1% -- Kaizen
             </p>
             <p>
-                Passionate and driven Software Engineer with expertise in full-stack web development using the MEAN/MERN stack and mobile development in Kotlin or cross-platform frameworks like Ionic and React Native. I enjoy building scalable, innovative applications and solving complex real world problems through clean and efficient code.
+                Continuous learner, leader and software engineer/developer innovator. Graduate with a bachelor’s degree in computer and information science, specializing in Application Development. With hands-on experience in full-stack web and mobile development, I’ve built and deployed scalable applications using the MEAN stack, Ionic/React Native, Kotlin and more.
             </p>
         </div>
     </div>

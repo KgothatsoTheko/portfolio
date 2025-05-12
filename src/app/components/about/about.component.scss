@@ -57,6 +57,10 @@
     transition: 0.5s ease;
 }
 
+.slider:nth-of-type(2) {
+    animation-direction: reverse;
+}
+
 .slider span:hover img {
     transform: translateY(-20px) scale(1.1);
 }
