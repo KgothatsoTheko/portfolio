@@ -11,6 +11,10 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ---
 
+## 📸 Screenshots
+
+---
+
 ## 📌 Features
 
 - 🧑‍💻 **About Me** – A brief introduction about who I am and what I do
